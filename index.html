@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
   <head>
-    <header>W</header>
-    <link rel="icon"  href="bootstrap.css" />
+    <header><b>Wecome to my Akan Name Generator</b></header>
+    <link rel="icon"  href="app.js" />
     <link rel="icon"  href="bootstrap.esm.js" />
     <link rel="icon"  href="CSS/style.html" />
     
   </head>
+  <style>
+    button{
+       background-color: blue;
+    }
+    b{
+      border: 3px solid snow ;
+      font-size: large;
+      text-align: inherit;
+    }
+    body{
+        padding: 50px;
+        border: 3px solid green;
+        background-color: aqua;
+    }
+</style>
 
   <body>
-      <div class="container p-5">
+      <div class="container">
         <form id="frmAkans">
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">DOB</label>
+          <div class="row mb-10">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+              DOB
+            </label>
             <div class="col sm-10">
               <input type="date" name="dob" class="form-control" id="inputPassword">
               </div>
           </div>
-          <fieldset class="row mb-3">
+          <fieldset class="row mb-10">
             <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
             <div class="col-sm-10">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="gridradios1" value="Male" checked>
-                <label class="form-check-label" for="gridradios1">
+                <input class="form-check-input" type="radio" name="gender" id="flexCheckDefault1" value="Male" checked>
+                <label class="form-check-label" for="flexCheckDefault1">
                   Male
                 </label>
+              </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="gridradios2" value="Female" checked>
-                  <label class="form-check-label" for="gridradios2">
+                  <input class="form-check-input" type="radio" name="gender" id="flexCheckDefault2" value="Female" checked>
+                  <label class="form-check-label" for="flexCheckDefault2">
                     Female
                   </label>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
 
           </fieldset>
-
+ <button type="submit" class="btn btn-primary">submit</button>
+        </form>
       </div>
 
-
+<script src="app.js" async defer></script>
         </body>
 </html>
