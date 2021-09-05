@@ -6,7 +6,17 @@
            <title>Akan Name Generator</title>
            <link rel="stylesheet" href="CSS/style.html" media="all">
            <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-         </head>
+         </head>\
+         <style>
+             .container{
+                 border: 3px solid black;
+                 background-color: aquamarine;
+             }
+             .row{
+                 border: 3px solid black;
+                 background-color: azure;
+             }
+         </style>
          <body>
             <div class="container">
         <nav class="avbar navbar-expand-sm">
@@ -22,8 +32,8 @@
            <div class="content">
              <div class="container">
                <h1>The Akan name generator!</h1>
-               <p>Hello there! This is a web application that takes your birthday details and calculates the day of the week you were born and then depending on your gender, outputs your Akan Name. <a class="research" href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">Akan names</a> are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. </p>
-               <p>To find out what your Akan name is, proceed to filling the form below and clicking the generate name button.
+               <p>Hello there! This is a Javascript application that takes input of your year,month and date of birth then  calculates the day of the week you were born and then depending on your gender, outputs your Akan Name. <a class="research" href="https://yen.com.gh/115080-akan-names-meanings.html" target="_blank">Akan names</a> are derived from Ghanian culture.Being obedient to their culture to this date, children are given their first name as the one that  corresponds to the day in the week they were born. </p>
+               <p>Curious find out what your Akan name is!!, proceed to filling the form below and clicking the generate name button.
                <form class="myform" onsubmit="return getAkanName()">
                  <label for="year-of-birth">
                    Year:
@@ -59,7 +69,7 @@
                <p id="result"></p>
              </div>
            </div>
-           div class="main">
+           <div class="main">
     <div class="row">
         <div class="col-md-3">
             <br>
