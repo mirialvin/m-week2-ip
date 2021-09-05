@@ -1,136 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/bootstrap.css">
-
-    <title>Akan Name Generator</title>
-</head>
-<style>
-    .container{
-            padding: 50px;
-            border: 3px solid green;
-            background-color: aqua;
-        }
-        .main{
-            text-align: center;
-            border: 3px solid greenyellow;
-        }
-    </style>
-
-<body>
-    <!-- Website logo and Websitename -->
-    <div class="container">
-        <nav class="avbar navbar-expand-sm">
-            <div class="container-fluid ">
-                <a class="navbar-brand img-responsive" href="#">
-                    <img src="images/1200px-Flag_of_Ghana.svg.png" alt="Logo" style="width:50px;">
-                </a>
-                <div class="websitename text-responsive">
-                    <h1 class="navbar-header text-warning">Akan<small class="header text-info">Name</small></h1>
-                </div>
-            </div>
-        </nav>
-        <div class="main">
-            <div class="row">
-                <div class="col-md-3">
-                    <br>
-                    <table class="tg">
-                        <tr>
-                            <th class="tg-baqh">Day of the Week</th>
-                            <th class="tg-0lax">Female Name</th>
-                            <th class="tg-0lax">Male Name</th>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">SUNDAY</td>
-                            <td class="tg-0lax">Akosua</td>
-                            <td class="tg-0lax">Kwasi</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">MONDAY</td>
-                            <td class="tg-0lax">Adwoa</td>
-                            <td class="tg-0lax">Kudwo</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">TUESDAY</td>
-                            <td class="tg-0lax">Abenaa</td>
-                            <td class="tg-0lax">Kwabena</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">WEDNESDAY</td>
-                            <td class="tg-0lax">Akua</td>
-                            <td class="tg-0lax">Kwaku</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">THURSDAY</td>
-                            <td class="tg-0lax">Yaa</td>
-                            <td class="tg-0lax">Yaw</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">FRIDAY</td>
-                            <td class="tg-0lax">Afua</td>
-                            <td class="tg-0lax">Kofi</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0lax">SATURDAY</td>
-                            <td class="tg-0lax">Ama</td>
-                            <td class="tg-0lax">Kwame</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-8">
-                    <form id="form" name="form" onsubmit="findDay()">
-                        <legend>Fill in to generate your Akan name:
-                            <hr>
-                        </legend>
-                        <label for="year ">Year of birth</label>
-                        <input type="number" id="year" name="year" min="1900" max="2020" required placeholder="Example: 1989">
-
-                        <label for="month ">Month</label>
-                        <input type="number" id="month" name="month" min="1" max="12" required placeholder="Example: December=12, May=5">
-
-                        <label for="date ">Date</label>
-                        <input type="number" id="date" name="date" min="1" max="31" required placeholder="Example: 21 ">
-
-                        <p>Select your gender: <br></p>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="gender" value="Female" checked>
-                              Female
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                              <input type="radio" name="gender" value="Male">
-                              Male
-                        </label>
-                        </div>
-
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
-    <div class="footer text-center ">
-        
-    </div>
-    <!-- Javascript links -->
-    <script src="app.js"></script>
-    <script src="bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js "></script>
-
-</body>
-
-</html>
+       <!DOCTYPE html>
+       <html lang="en" dir="ltr">
+         <head>
+           <meta charset="utf-8">
+           <title>Akan Name Generator</title>
+           <link rel="stylesheet" href="style.html" media="all">
+           <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+           <link rel="icon" href="images/1200px-Flag_of_Ghana.svg.png" type="img/jpg">
+         </head>
+         <body>
+           <div class="content">
+             <div class="container">
+               <h1>The Akan name generator!</h1>
+               <p>Hello there! This is a web application that takes your birthday details and calculates the day of the week you were born and then depending on your gender, outputs your Akan Name. <a class="research" href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">Akan names</a> are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. </p>
+               <p>To find out what your Akan name is, proceed to filling the form below and clicking the generate name button.
+               <form class="myform" onsubmit="return getAkanName()">
+                 <label for="year-of-birth">
+                   Year:
+                   <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
+                 </label>
+                 <label for="month-of-birth">
+                   Month:
+                   <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
+                 </label>
+                 <label for="day-of-birth">
+                   Day:
+                   <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
+                 </label>
+                 <br>
+                 <label for="gender">
+                   <p>Select your gender: </p>
+                   Male
+                   <input id="male-input" type="radio" name="gender" value="male" required>
+                   Female
+                   <input id="female-input" type="radio" name="gender" value="female" required>
+       
+                 </label>
+                 <br><br>
+                 <input id="get-name" type="submit" name="" value="Generate name">
+                 <br><br>
+               </form>
+               <form onsubmit="return clearInput()">
+                 <input class="clear" type="submit" value="Clear input">
+               </form>
+       
+       
+               <h4 id = display-name><strong>Your Akan name will be displayed below:</strong></h4>
+               <p id="result"></p>
+             </div>
+           </div>
+       
+           <script src="app.js" ></script>
+       
+         </body>
+       </html>
