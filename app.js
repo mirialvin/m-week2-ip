@@ -9,7 +9,7 @@ var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
 // Validation function
 
 function additionSubmit() {
-    Event.preventDefault();
+    event.preventDefault();
     var gender = document.getElementById('gender').value;
     var date = document.getElementById('date').value;
     date = new Date(date);
