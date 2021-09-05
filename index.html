@@ -1,60 +1,159 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-  <head>
-    <header><b>Wecome to my Akan Name Generator</b></header>
-    <link rel="icon"  href="app.js" />
-    <link rel="icon"  href="bootstrap.esm.js" />
-    <link rel="icon"  href="CSS/style.html" />
-    
-  </head>
-  <style>
-    button{
-       background-color: blue;
-    }
-    b{
-      border: 3px solid snow ;
-      font-size: large;
-      text-align: inherit;
-    }
-    body{
-        padding: 50px;
-        border: 3px solid green;
-        background-color: aqua;
-    }
-</style>
+<html lang="en">
 
-  <body>
-      <div class="container">
-        <form id="frmAkans">
-          <div class="row mb-10">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">
-              DOB
-            </label>
-            <div class="col sm-10">
-              <input type="date" name="dob" class="form-control" id="inputPassword">
-              </div>
-          </div>
-          <fieldset class="row mb-10">
-            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="flexCheckDefault1" value="Male" checked>
-                <label class="form-check-label" for="flexCheckDefault1">
-                  Male
-                </label>
-              </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="flexCheckDefault2" value="Female" checked>
-                  <label class="form-check-label" for="flexCheckDefault2">
-                    Female
-                  </label>
+<head>
+    <meta charset="UTF-8">
+    <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Akan Name Generator</title>
+</head>
+
+<body>
+    <!-- Website logo and Websitename -->
+    <div class="container">
+        <nav class="avbar navbar-expand-sm">
+            <div class="container-fluid ">
+                <a class="navbar-brand img-responsive" href="#">
+                    <img src="images/akanlogo.png" alt="Logo" style="width:50px;">
+                </a>
+                <div class="websitename text-responsive">
+                    <h1 class="navbar-header text-warning">Akan<small class="header text-info">Name</small></h1>
                 </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Description and users input form -->
+    <div class="container" id="container-fluid">
+        <div class="row ">
+            <div class="col-md-6 bg-info" id="column">
+                <h2 class="text-center">Ghanaian Name</h2>
+                <div class="about">
+                    <i class="fa fa-male text-warning"></i> <br><br>
+                    <p> <strong>Akan names </strong>are the day names in Ghana and are derived from <strong>Ghanaian culture</strong>.</p>
+                </div>
+                <div class="about">
+                    <i class="fa fa-female text-danger"></i>
+                    <p> In <strong>Ghana</strong>, the days of the week are very impotant aspects of the naming culture.</p>
+                </div>
+                <div class="about">
+                    <i class="fa fa-male text-success"> </i> <br><br>
+                    <p> <strong>Babies</strong> are give a day name according to the day of the week they were born.</p>
+                </div>
+                <div class="about">
+                    <i class="fa fa-female text-white"></i>
+                    <p> These day names come in pairs for each <strong>specific day</strong>; one for males and the other for females.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center" id="column2">
+                <p class="guide">Enter your information and get your <strong>Akan Name</strong>:</p>
+                <form>
+                    <div class="form-group">
+                        <label for="birthday">Please enter your birthday here:</label>
+                        <input type="date" name="date" class="form-control" placeholder="Enter Your BirthYear" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">Please select your gender here:</label>
+                        <select class="form-control mb-2" id="gender"> 
+                            <option value="choose">Select Your Gender</option>
+                            <option value="male" class="form-control" id="male">Male</option>
+                            <option value="female" class="form-control" id="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="submit" class="form-control3 text-center bg-info" id="btn btn-default" onclick="additionSubmit()" value=" Get Akan Name " />
+                    </div>
+                    <button onclick="document.getElementById('').value= ''" class="bg-info">Cancel</button>
+                    <br>
+                    <br>
+                    <div class="text-center bg-dark text-warning" id="result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Cards for days of the week, male names and female names -->
+    <div class="container">
+        <p class="chart text-responsive text-center">Below is a chart indicating the <strong>male</strong> or <strong>female</strong> names for each corresponding day of the week to be displayed in accordance to your <strong>birthday</strong>:</p>
+        <div class="row2 text-responsive" id="row2">
+            <div class="col1-md-4 text-responsive text-center">
+                <div class="card card-info">
+                    <div class="card-heading ">
+                        <h2 class="card-title text-center">Days Of The Week</h2>
+                    </div>
+                    <div class="card-body bg-warning">
+                        <ul class="dayweek">
+                            <p class="text-gray">Sunday</p>
+                            <p class="text-danger">Monday</p>
+                            <p class="text-info">Tuesday</p>
+                            <p class="text-success">Wednesday</p>
+                            <p class="text-dark">Thursday</p>
+                            <p class="text-light">Friday</p>
+                            <p class="text-secondary">Saturday</p>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <p>Akan Name Days</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col2-md-4 text-center">
+                <div class="card card-info">
+                    <div class="card-heading">
+                        <h2 class="card-title text-center">Ghananian Male</h2>
+                    </div>
+                    <div class="card-body bg-warning">
+                        <ul class="genmale">
+                            <p>Kwasi</p>
+                            <p>Kwadwo</p>
+                            <p>Kwabena</p>
+                            <p>Kwaku</p>
+                            <p>Yaw</p>
+                            <p>Kofi</p>
+                            <p>Kwame</p>
+                        </ul>
+                    </div>
+                    <div class="card-footer ">
+                        <p>Males Akan Name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col3-md-4-responsive text-center ">
+                <div class="card card-info ">
+                    <div class="card-heading ">
+                        <h2 class="card-title text-center ">Ghananian Female</h2>
+                    </div>
+                    <div class="card-body bg-warning ">
+                        <ul>
+                            <p>Akosua</p>
+                            <p>Adwoa</p>
+                            <p>Abenaa</p>
+                            <p>Akua</p>
+                            <p>Yaa</p>
+                            <p>Afua</p>
+                            <p>Ama</p>
+                        </ul>
+                    </div>
+                    <div class="card-footer ">
+                        <p>Females Akan Name</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer text-center ">
+        Copyright (c) 2020 Collins Akumu.All rigths reserved
+    </div>
+    <!-- Javascript links -->
+    <script src="js/styles.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js "></script>
 
-          </fieldset>
- <button type="submit" class="btn btn-primary">submit</button>
-        </form>
-      </div>
+</body>
 
-<script src="app.js" async defer></script>
-        </body>
 </html>
