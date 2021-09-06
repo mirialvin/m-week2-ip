@@ -17,7 +17,7 @@ javascript
 ## Support and contact details
 *alvinhiuhu@gmail.com
 ## Git Hub Link
-*
+*https://mirialvin.github.io/m-week2-ip/
 ### License
 *{Determine the license under which this application can be used.  See below for more details on licensing.}*
 Copyright (c) {year} **{MIT License or Moringa school}**
